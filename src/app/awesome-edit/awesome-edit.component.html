@@ -1,0 +1,27 @@
+<h1 class="text-center">My Awesome List</h1>
+
+<form
+  class="mx-auto w-50"
+  [formGroup]="awesomeForm"
+  (ngSubmit)="onSubmit()"
+  *ngIf="awesomeForm"
+>
+  <div class="mb-3">
+    <label for="tag" class="form-label">Tag</label>
+    <input formControlName="tag" type="text" class="form-control" id="tag" />
+  </div>
+  <div class="mb-3">
+    <label for="url" class="form-label">URL</label>
+    <input formControlName="url" type="text" class="form-control" id="url" />
+  </div>
+  <div class="mb-3">
+    <label for="descriptions" class="form-label">Descriptions</label>
+    <textarea
+      formControlName="descriptions"
+      class="form-control"
+      id="descriptions"
+      rows="3"
+    ></textarea>
+  </div>
+  <button class="btn btn-primary" type="submit">Update</button>
+</form>
